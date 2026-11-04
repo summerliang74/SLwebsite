@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="An offline-first planner that turns assignments and exam preparation into editable daily tasks."
+    />
+    <title>Homework Tracker — Yichen Liang</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="profile-page detail-page">
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+      <nav class="wrap" aria-label="Main navigation">
+        <a class="logo" href="index.html">YICHEN LIANG</a>
+        <div class="links">
+          <a class="link" href="index.html#projects">Projects</a>
+          <a class="link" href="index.html#about">About Me</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main" class="wrap">
+      <section class="hero">
+        <p class="label">Homework Tracker</p>
+        <h1>Big deadlines.<br /><em>Smaller steps.</em></h1>
+        <p>
+          An offline-first planner that turns assignments and exam preparation into editable daily
+          tasks.
+        </p>
+      </section>
+      <section class="project-media">
+        <figure class="phone-media">
+          <a
+            href="assets/planner-mobile.png"
+            aria-label="Open full-size Homework Tracker screenshot"
+            ><img
+              loading="lazy"
+              src="assets/planner-mobile.png"
+              width="1080"
+              height="2400"
+              alt="Homework Tracker Android screen showing a week calendar, completed daily tasks, and an add button."
+          /></a>
+          <figcaption>
+            Android emulator capture from the project archive: calendar navigation and the daily
+            task view.
+          </figcaption>
+        </figure>
+      </section>
+      <section class="visual-story">
+        <h2>From planning to daily use</h2>
+        <p class="note">
+          The web view is a fresh local capture; phone views are archived emulator captures.
+        </p>
+        <div class="image-gallery">
+          <figure>
+            <a href="assets/planner-web-live.png" aria-label="Open full-size image"
+              ><img
+                loading="lazy"
+                src="assets/planner-web-live.png"
+                alt="Web build opened locally and captured on November 3, 2026."
+            /></a>
+            <figcaption>Web build opened locally and captured on November 3, 2026.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/planner-pba.png" aria-label="Open full-size image"
+              ><img
+                loading="lazy"
+                src="assets/planner-pba.png"
+                alt="Breaking a larger assignment into steps."
+            /></a>
+            <figcaption>Breaking a larger assignment into steps.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/planner-reminders.png" aria-label="Open full-size image"
+              ><img
+                loading="lazy"
+                src="assets/planner-reminders.png"
+                alt="Daily summaries, quiet hours, and snooze preferences."
+            /></a>
+            <figcaption>Daily summaries, quiet hours, and snooze preferences.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <div class="reading">
+        <section>
+          <h2>The everyday problem</h2>
+          <p>
+            A deadline says when work must be finished. It does not explain what to do today.
+            Homework Tracker organizes assignments, longer projects, and exam preparation into tasks
+            that can be reviewed and adjusted.
+          </p>
+        </section>
+        <section>
+          <h2>A plan students can edit</h2>
+          <figure class="inline-media phone-media">
+            <a href="assets/planner-exam.png" aria-label="Open full-resolution image"
+              ><img
+                src="assets/planner-exam.png"
+                alt="Exam editor showing a math midterm, revision topics, and generated dated study steps."
+                loading="lazy"
+                decoding="async"
+            /></a>
+            <figcaption>
+              Exam-planning capture: topics become dated revision steps that can be edited.
+            </figcaption>
+          </figure>
+          <p>
+            The documented workflows include choosing a date, adding assignments, setting reminders,
+            and marking tasks complete. Exams can generate an editable revision plan working
+            backward from the exam date.
+          </p>
+          <p>
+            A task-density calendar and timetable provide context alongside the daily list.
+            Suggested steps and dates remain editable rather than becoming a fixed schedule.
+          </p>
+        </section>
+        <section>
+          <h2>Working offline</h2>
+          <p>
+            The project documents Android and Web clients with local persistence: SQLite on Android
+            and IndexedDB on the web. Local changes and synchronization records are designed to be
+            written together.
+          </p>
+          <p>
+            This brings an engineering question into a familiar setting: how should the planner
+            preserve work when the network is unavailable, and reconcile changes when it returns?
+          </p>
+        </section>
+        <section>
+          <h2>Project status</h2>
+          <p>
+            The repository README records implemented planning, reminder, and account-sync features.
+            This portfolio review has not independently rerun those workflows or established
+            adoption metrics.
+          </p>
+          <p>
+            The next evidence to add is a real task-planning walkthrough and a documented account of
+            individual contributions. Until then, this page describes the product and its
+            implementation record.
+          </p>
+        </section>
+        <section>
+          <a class="link more" href="index.html">Home</a
+          ><a class="link more" href="archive.html">Explore the project archive ↗</a>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap"><span>Yichen Liang / 梁逸琛</span><span>Project notes · 2026</span></div>
+    </footer>
+  </body>
+</html>

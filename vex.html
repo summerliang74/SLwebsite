@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Competition robot software connecting driver control, autonomous routines, and coordinated mechanisms."
+    />
+    <title>VEX control software — Yichen Liang</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="profile-page detail-page">
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+      <nav class="wrap" aria-label="Main navigation">
+        <a class="logo" href="index.html">YICHEN LIANG</a>
+        <div class="links">
+          <a class="link" href="index.html#projects">Projects</a>
+          <a class="link" href="index.html#about">About Me</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main" class="wrap">
+      <section class="hero">
+        <p class="label">VEX control software</p>
+        <h1>From commands.<br /><em>To coordination.</em></h1>
+        <p>
+          Competition robot software connecting driver control, autonomous routines, and coordinated
+          mechanisms.
+        </p>
+      </section>
+      <section class="project-media">
+        <figure>
+          <a href="assets/vex-field.png" aria-label="Open full-size VEX field model"
+            ><img
+              src="assets/vex-field.png"
+              width="1100"
+              height="1100"
+              loading="lazy"
+              alt="VEX planning field model with coordinates and labeled game-object positions."
+          /></a>
+          <figcaption>
+            Field model from the 3219A planning archive. This is a planning illustration, not a
+            robot tracking result.
+          </figcaption>
+        </figure>
+      </section>
+      <section class="visual-story">
+        <h2>Inside the competition code</h2>
+        <p>
+          Two excerpts from the current local 3219A source. These show software structure, not
+          field-test results.
+        </p>
+        <div class="image-gallery">
+          <figure>
+            <a href="assets/vex-routine.png" aria-label="Open full-size image"
+              ><img
+                loading="lazy"
+                src="assets/vex-routine.png"
+                alt="Autonomous routine: chassis movement and lift actions, from left-autonomous.cpp."
+            /></a>
+            <figcaption>
+              Autonomous routine: chassis movement and lift actions, from left-autonomous.cpp.
+            </figcaption>
+          </figure>
+          <figure>
+            <a href="assets/vex-macro.png" aria-label="Open full-size image"
+              ><img
+                loading="lazy"
+                src="assets/vex-macro.png"
+                alt="Pickup macro: staged lift and claw-turn control, from mechanism-macros.cpp."
+            /></a>
+            <figcaption>
+              Pickup macro: staged lift and claw-turn control, from mechanism-macros.cpp.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <div class="reading">
+        <section>
+          <h2>The engineering problem</h2>
+          <p>
+            A competition routine asks several mechanisms to work together: drive to a location,
+            turn, raise a lift, and release a game object. Reliable behavior depends on the sequence
+            and on what happens when a movement cannot finish.
+          </p>
+        </section>
+        <section>
+          <h2>From driving to autonomous routines</h2>
+          <p>
+            The current 3219A project separates driver control, chassis motion, mechanisms,
+            telemetry, and autonomous routines. Four routes are organized independently so that
+            tuning one side does not implicitly change another.
+          </p>
+          <p>
+            The inspected motion code includes a trapezoidal motion profile and heading control. It
+            checks sensor availability and invalid targets before proceeding. These code paths
+            describe the implementation, rather than a measured guarantee of match performance.
+          </p>
+        </section>
+        <section>
+          <h2>Coordinating the mechanisms</h2>
+          <p>
+            Mechanism macros break pickup and return-to-load actions into stages. Lift position,
+            rotation, competition mode, and cancellation determine which action can run next.
+          </p>
+          <p>
+            In the inspected autonomous routine, lift commands and chassis movement are interleaved,
+            with explicit waits where the sequence requires them. This makes coordination a concrete
+            software problem.
+          </p>
+        </section>
+        <section>
+          <h2>My role and the team</h2>
+          <p>
+            My recorded role focuses on programming and integration, including manual-control code.
+            The project also contains work from other contributors. Color recognition and some
+            earlier forward/reverse motion modes were not my original work.
+          </p>
+          <p>
+            The examples here describe the team codebase. They should not be read as a claim that I
+            independently authored every control module.
+          </p>
+        </section>
+        <section>
+          <h2>Different versions, different experiments</h2>
+          <figure class="inline-media">
+            <a href="assets/vex-heading-code.png" aria-label="Open full-resolution image"
+              ><img
+                src="assets/vex-heading-code.png"
+                alt="Archived swingToHeading code illustration showing heading error and angular velocity feedback."
+                loading="lazy"
+                decoding="async"
+            /></a>
+            <figcaption>
+              Archived control-loop illustration from the repository. It documents an earlier
+              implementation, not a claim about the exact current competition firmware.
+            </figcaption>
+          </figure>
+          <p>
+            Earlier work includes odometry and move-to-point experiments. The current competition
+            README records the removal of full pose-based driving from the formal firmware. Those
+            experiments and the current match program represent different versions.
+          </p>
+          <p>
+            This portfolio does not claim competition results, measured accuracy, or field
+            reliability that have not been documented.
+          </p>
+        </section>
+        <section>
+          <a class="link more" href="index.html">Home</a
+          ><a class="link more" href="archive.html">Explore the project archive ↗</a>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap"><span>Yichen Liang / 梁逸琛</span><span>Project notes · 2026</span></div>
+    </footer>
+  </body>
+</html>

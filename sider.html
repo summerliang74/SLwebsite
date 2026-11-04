@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Sider (SHSID Online): a campus learning-resource platform, with search, sharing, and moderation."
+    />
+    <title>Sider — Yichen Liang</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="profile-page detail-page">
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+      <nav class="wrap" aria-label="Main navigation">
+        <a class="logo" href="index.html">YICHEN LIANG</a>
+        <div class="links">
+          <a class="link" href="index.html#projects">Projects</a>
+          <a class="link" href="index.html#about">About Me</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main" class="wrap">
+      <section class="hero">
+        <p class="label">02 / Campus software / Sider</p>
+        <h1>A shared place<br /><em>to learn.</em></h1>
+        <div class="hero-foot">
+          <p class="serif" style="font-size: 28px">Sider / SHSID Online</p>
+          <p>
+            A focused resource-sharing platform for students, built around discovering useful
+            materials and managing how they are shared.
+          </p>
+        </div>
+      </section>
+      <section class="project-media">
+        <figure>
+          <a href="assets/sider-library.png" aria-label="Open full-size Sider screenshot"
+            ><img
+              loading="lazy"
+              src="assets/sider-library.png"
+              width="1440"
+              height="1067"
+              alt="Sider resource-library interface with search, tags, upload entry, and a resource list."
+          /></a>
+          <figcaption>
+            Resource-library interface from the project review archive. The screenshot illustrates
+            the interface, not verified adoption or live usage.
+          </figcaption>
+        </figure>
+      </section>
+      <section class="visual-story">
+        <h2>Interface walkthrough</h2>
+        <p class="note">Interface review captures from the project archive.</p>
+        <div class="image-gallery">
+          <figure>
+            <a href="assets/sider-detail.png" aria-label="Open full-size image"
+              ><img
+                loading="lazy"
+                src="assets/sider-detail.png"
+                alt="Resource detail and download controls."
+            /></a>
+            <figcaption>Resource detail and download controls.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/sider-uploads.png" aria-label="Open full-size image"
+              ><img
+                loading="lazy"
+                src="assets/sider-uploads.png"
+                alt="Managing previously uploaded resources."
+            /></a>
+            <figcaption>Managing previously uploaded resources.</figcaption>
+          </figure>
+          <figure>
+            <a href="assets/sider-filters.png" aria-label="Open full-size image"
+              ><img
+                loading="lazy"
+                src="assets/sider-filters.png"
+                alt="Filtering resources on a narrow screen."
+            /></a>
+            <figcaption>Filtering resources on a narrow screen.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <div class="reading">
+        <section>
+          <h2>A campus resource hub</h2>
+          <p>
+            Sider, also called SHSID Online, is a learning-resource platform for SHSID students. Its
+            core workflow lets students search, upload, download, and manage resources through a
+            shared library.
+          </p>
+          <p>
+            The product centers on a concrete question: how can students find useful materials while
+            keeping shared files and access manageable?
+          </p>
+        </section>
+        <section>
+          <h2>A focused first version</h2>
+          <p>
+            The MVP prioritizes resource sharing. Search and tags organize the library; students can
+            manage their own uploads, and administrators can review reports and moderate resources.
+          </p>
+          <p>
+            Discussion threads, social feeds, recommendations, and online file previews sit outside
+            this version. Keeping the scope focused makes the main resource workflow easier to
+            evaluate.
+          </p>
+        </section>
+        <section>
+          <h2>Designing the whole workflow</h2>
+          <figure class="inline-media">
+            <a href="assets/sider-upload.png" aria-label="Open full-resolution image"
+              ><img
+                src="assets/sider-upload.png"
+                alt="Sider upload form with title, description, tags, and file selection."
+                loading="lazy"
+                decoding="async"
+            /></a>
+            <figcaption>
+              Upload flow from the interface review archive: metadata and file selection are
+              presented together.
+            </figcaption>
+          </figure>
+          <p>
+            Sharing a file involves more than an upload button. Sider connects student
+            authentication, resource metadata, private file storage, malware scanning, and download
+            access.
+          </p>
+          <p>
+            Search supports titles, descriptions, tags, and filenames. Moderation includes reports,
+            resource visibility controls, user suspension, and audit records. Together, these
+            features address how a shared library is maintained over time.
+          </p>
+        </section>
+        <section>
+          <h2>Implementation and evidence</h2>
+          <p>
+            The repository documents a Next.js and TypeScript application with PostgreSQL, private
+            object storage, and automated checks. Its traceability matrix records implemented paths
+            for authentication, search, uploads, downloads, and moderation.
+          </p>
+          <p>
+            Implementation is one stage of the project. The same records identify remaining
+            production checks, including end-to-end service verification, recovery exercises, and
+            browser and accessibility acceptance.
+          </p>
+        </section>
+        <section>
+          <h2>Current status</h2>
+          <p>
+            MVP implementation; production acceptance in progress. The available records do not
+            establish a school-wide launch or measured student adoption.
+          </p>
+          <p>
+            This overview describes the product and its documented implementation. A detailed
+            account of individual and collaborative contributions has not yet been added.
+          </p>
+        </section>
+        <section>
+          <h2>Further exploration</h2>
+          <p>
+            Alongside campus software, my portfolio explores computational modeling and robotics.
+          </p>
+          <a class="link more" href="solar-aircraft.html">Explore the solar-aircraft study ↗</a
+          ><a class="link more" href="index.html">Home</a>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap">
+        <span>Yichen Liang / 梁逸琛</span><span>Sider · Project notes · November 2026</span>
+      </div>
+    </footer>
+  </body>
+</html>

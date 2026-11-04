@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Yichen Liang's solar-aircraft research: energy, mass, and design trade-offs."
+    />
+    <title>Solar aircraft — Yichen Liang</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="profile-page detail-page">
+    <a class="skip" href="#main">Skip to content</a>
+    <header>
+      <nav class="wrap" aria-label="Main navigation">
+        <a class="logo" href="index.html">YICHEN LIANG</a>
+        <div class="links">
+          <a class="link" href="index.html#projects">Projects</a>
+          <a class="link" href="index.html#about">About Me</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main" class="wrap">
+      <section class="hero">
+        <p class="label">01 / Computational modeling / Yuanpei project</p>
+        <h1>More energy.<br /><em>More weight.</em></h1>
+        <p>Does a bigger battery always mean a longer flight?</p>
+      </section>
+      <div class="reading">
+        <section>
+          <h2>The question</h2>
+          <p>
+            A battery stores energy, but an aircraft must also carry it. I wanted to understand how
+            those competing effects change endurance—and how the answer shifts when the rest of the
+            design changes.
+          </p>
+          <p>
+            This investigation uses a computational model rather than a flight-tested aircraft. Its
+            results describe the modeled conditions.
+          </p>
+        </section>
+        <section>
+          <h2>Building the model</h2>
+          <p>
+            I developed coupled models of mass, aerodynamics, solar-energy input, and battery state
+            of charge, and wrote the Python modeling code. The project combined a 45,325-design
+            parameter sweep with finer validation and sensitivity analysis.
+          </p>
+          <p>
+            I co-designed the original procedural implementation. AI assisted with some
+            optimization, debugging, and language editing; the final codebase should not be
+            described as entirely independently designed.
+          </p>
+        </section>
+        <section>
+          <h2>Reading the trade-off</h2>
+          <figure>
+            <img
+              src="assets/battery-response.svg"
+              width="820"
+              height="410"
+              alt="Fine-step simulation: endurance changes with battery mass. Exact values are provided in the downloadable CSV."
+            />
+            <figcaption>
+              Actual project output: a battery-mass sweep at fixed wingspan (8.375 m) and aspect
+              ratio (12). All sampled designs are shown, including those outside the screening
+              constraint. Simulation results, not flight tests.
+            </figcaption>
+          </figure>
+          <p style="margin-top: 32px">
+            The response is not a simple rule that more battery always produces more flight time.
+            Extra stored energy and the cost of carrying additional mass interact with the solar
+            cycle.
+          </p>
+          <p>
+            The project summary reports a peak of 27.5 hours across this sweep, compared with 27.0
+            hours among designs passing the empty-fraction screening constraint. A raw maximum is
+            not automatically an acceptable design.
+          </p>
+          <a class="link more" href="assets/battery-response.csv" download
+            >Download the plotted data ↓</a
+          >
+          <p class="note">
+            Source: August 2, 2026 fine-step export. Columns: battery_mass (kg), flight_time_fine
+            (hours), empty_fraction_ok (screening flag). The line connects sampled outputs, not a
+            validated prediction between samples.
+          </p>
+        </section>
+        <section>
+          <h2>What the results can tell us</h2>
+          <figure class="inline-media">
+            <a href="assets/solar-response-curves.png" aria-label="Open full-resolution image"
+              ><img
+                src="assets/solar-response-curves.png"
+                alt="Three research plots comparing modeled flight duration against wingspan, battery mass, and aspect ratio."
+                loading="lazy"
+                decoding="async"
+            /></a>
+            <figcaption>
+              Original fine-step research figure: three design variables, fitted response curves,
+              and screened-valid evaluations. Click to inspect the full-resolution original.
+            </figcaption>
+          </figure>
+          <p>
+            Endurance optimization requires considering the whole coupled system. Improving one
+            component in isolation can introduce costs elsewhere.
+          </p>
+          <p>
+            These are model outputs under particular assumptions, not demonstrated flight durations.
+            Physical testing and validation of the assumptions would be necessary before treating
+            them as aircraft performance claims.
+          </p>
+        </section>
+        <section>
+          <h2>Project record</h2>
+          <p>
+            This is a course research project, not a peer-reviewed publication. The contribution
+            summary follows the September 2026 project record; the graph is drawn directly from the
+            archived numerical export.
+          </p>
+          <a class="link more" href="index.html">Home</a>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="wrap"><span>Yichen Liang / 梁逸琛</span><span>Research notes · 2026</span></div>
+    </footer>
+  </body>
+</html>

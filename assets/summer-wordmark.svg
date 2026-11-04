@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 356 76">
+  <defs>
+    <pattern id="h" width="3" height="3" patternUnits="userSpaceOnUse">
+      <rect width="3" height="3" fill="white" />
+      <path d="M0 3L3 0" stroke="#dedee2" stroke-width=".4" />
+    </pattern>
+    <g id="letters">
+      <rect x="10" y="0" width="10" height="10" />
+      <rect x="20" y="0" width="10" height="10" />
+      <rect x="30" y="0" width="10" height="10" />
+      <rect x="40" y="0" width="10" height="10" />
+      <rect x="0" y="10" width="10" height="10" />
+      <rect x="0" y="20" width="10" height="10" />
+      <rect x="10" y="30" width="10" height="10" />
+      <rect x="20" y="30" width="10" height="10" />
+      <rect x="30" y="30" width="10" height="10" />
+      <rect x="40" y="40" width="10" height="10" />
+      <rect x="40" y="50" width="10" height="10" />
+      <rect x="0" y="60" width="10" height="10" />
+      <rect x="10" y="60" width="10" height="10" />
+      <rect x="20" y="60" width="10" height="10" />
+      <rect x="30" y="60" width="10" height="10" />
+      <rect x="60" y="0" width="10" height="10" />
+      <rect x="100" y="0" width="10" height="10" />
+      <rect x="60" y="10" width="10" height="10" />
+      <rect x="100" y="10" width="10" height="10" />
+      <rect x="60" y="20" width="10" height="10" />
+      <rect x="100" y="20" width="10" height="10" />
+      <rect x="60" y="30" width="10" height="10" />
+      <rect x="100" y="30" width="10" height="10" />
+      <rect x="60" y="40" width="10" height="10" />
+      <rect x="100" y="40" width="10" height="10" />
+      <rect x="60" y="50" width="10" height="10" />
+      <rect x="100" y="50" width="10" height="10" />
+      <rect x="70" y="60" width="10" height="10" />
+      <rect x="80" y="60" width="10" height="10" />
+      <rect x="90" y="60" width="10" height="10" />
+      <rect x="120" y="0" width="10" height="10" />
+      <rect x="160" y="0" width="10" height="10" />
+      <rect x="120" y="10" width="10" height="10" />
+      <rect x="130" y="10" width="10" height="10" />
+      <rect x="150" y="10" width="10" height="10" />
+      <rect x="160" y="10" width="10" height="10" />
+      <rect x="120" y="20" width="10" height="10" />
+      <rect x="140" y="20" width="10" height="10" />
+      <rect x="160" y="20" width="10" height="10" />
+      <rect x="120" y="30" width="10" height="10" />
+      <rect x="140" y="30" width="10" height="10" />
+      <rect x="160" y="30" width="10" height="10" />
+      <rect x="120" y="40" width="10" height="10" />
+      <rect x="160" y="40" width="10" height="10" />
+      <rect x="120" y="50" width="10" height="10" />
+      <rect x="160" y="50" width="10" height="10" />
+      <rect x="120" y="60" width="10" height="10" />
+      <rect x="160" y="60" width="10" height="10" />
+      <rect x="180" y="0" width="10" height="10" />
+      <rect x="220" y="0" width="10" height="10" />
+      <rect x="180" y="10" width="10" height="10" />
+      <rect x="190" y="10" width="10" height="10" />
+      <rect x="210" y="10" width="10" height="10" />
+      <rect x="220" y="10" width="10" height="10" />
+      <rect x="180" y="20" width="10" height="10" />
+      <rect x="200" y="20" width="10" height="10" />
+      <rect x="220" y="20" width="10" height="10" />
+      <rect x="180" y="30" width="10" height="10" />
+      <rect x="200" y="30" width="10" height="10" />
+      <rect x="220" y="30" width="10" height="10" />
+      <rect x="180" y="40" width="10" height="10" />
+      <rect x="220" y="40" width="10" height="10" />
+      <rect x="180" y="50" width="10" height="10" />
+      <rect x="220" y="50" width="10" height="10" />
+      <rect x="180" y="60" width="10" height="10" />
+      <rect x="220" y="60" width="10" height="10" />
+      <rect x="240" y="0" width="10" height="10" />
+      <rect x="250" y="0" width="10" height="10" />
+      <rect x="260" y="0" width="10" height="10" />
+      <rect x="270" y="0" width="10" height="10" />
+      <rect x="280" y="0" width="10" height="10" />
+      <rect x="240" y="10" width="10" height="10" />
+      <rect x="240" y="20" width="10" height="10" />
+      <rect x="240" y="30" width="10" height="10" />
+      <rect x="250" y="30" width="10" height="10" />
+      <rect x="260" y="30" width="10" height="10" />
+      <rect x="270" y="30" width="10" height="10" />
+      <rect x="240" y="40" width="10" height="10" />
+      <rect x="240" y="50" width="10" height="10" />
+      <rect x="240" y="60" width="10" height="10" />
+      <rect x="250" y="60" width="10" height="10" />
+      <rect x="260" y="60" width="10" height="10" />
+      <rect x="270" y="60" width="10" height="10" />
+      <rect x="280" y="60" width="10" height="10" />
+      <rect x="300" y="0" width="10" height="10" />
+      <rect x="310" y="0" width="10" height="10" />
+      <rect x="320" y="0" width="10" height="10" />
+      <rect x="330" y="0" width="10" height="10" />
+      <rect x="300" y="10" width="10" height="10" />
+      <rect x="340" y="10" width="10" height="10" />
+      <rect x="300" y="20" width="10" height="10" />
+      <rect x="340" y="20" width="10" height="10" />
+      <rect x="300" y="30" width="10" height="10" />
+      <rect x="310" y="30" width="10" height="10" />
+      <rect x="320" y="30" width="10" height="10" />
+      <rect x="330" y="30" width="10" height="10" />
+      <rect x="300" y="40" width="10" height="10" />
+      <rect x="320" y="40" width="10" height="10" />
+      <rect x="300" y="50" width="10" height="10" />
+      <rect x="330" y="50" width="10" height="10" />
+      <rect x="300" y="60" width="10" height="10" />
+      <rect x="340" y="60" width="10" height="10" />
+    </g>
+  </defs>
+  <use href="#letters" transform="translate(3 4)" fill="#e4e4e7" />
+  <use href="#letters" fill="url(#h)" stroke="#c6c6ca" stroke-width=".35" />
+</svg>
