@@ -18,14 +18,15 @@
         <div class="links">
           <a class="link" href="index.html#projects">Projects</a>
           <a class="link" href="index.html#about">About Me</a>
+          <a class="link" href="archive.html">Archive</a>
         </div>
       </nav>
     </header>
     <main id="main" class="wrap">
       <section class="hero">
-        <p class="label">01 / Computational modeling / Yuanpei project</p>
+        <p class="label">01 / Computational modeling / March–August 2026</p>
         <h1>More energy.<br /><em>More weight.</em></h1>
-        <p>Does a bigger battery always mean a longer flight?</p>
+        <p><em>Endurance Optimization of a Small Solar-Powered UAV</em>: does a bigger battery always mean a longer flight?</p>
       </section>
       <div class="reading">
         <section>
@@ -39,18 +40,22 @@
             This investigation uses a computational model rather than a flight-tested aircraft. Its
             results describe the modeled conditions.
           </p>
+          <p>
+            I completed the project individually, with guidance from mentor Yitao Zhuang, from
+            around March through August 3, 2026.
+          </p>
         </section>
         <section>
           <h2>Building the model</h2>
           <p>
-            I developed coupled models of mass, aerodynamics, solar-energy input, and battery state
-            of charge, and wrote the Python modeling code. The project combined a 45,325-design
-            parameter sweep with finer validation and sensitivity analysis.
+            I defined coupled models of mass, aerodynamics, solar-energy input, and battery state
+            of charge. The project combined a 45,325-design parameter sweep with finer validation
+            and sensitivity analysis.
           </p>
           <p>
-            I co-designed the original procedural implementation. AI assisted with some
-            optimization, debugging, and language editing; the final codebase should not be
-            described as entirely independently designed.
+            I designed the research question and modeling approach, then used AI for code
+            generation, debugging, and language editing. The model assumptions and interpretation
+            remained decisions I had to test and revise.
           </p>
         </section>
         <section>
@@ -88,6 +93,25 @@
           </p>
         </section>
         <section>
+          <h2>Rebuilding the mass estimate</h2>
+          <p>
+            The course version treated the fuselage as a 0.73 m diameter cylinder. That shortcut
+            produced a 17.59 kg fuselage estimate. After the course ended, I replaced it with a
+            component-level calculation and obtained 5.38 kg for the fuselage.
+          </p>
+          <p>
+            With the same aerodynamic, solar, and battery models, the revised mass input produced a
+            candidate aircraft of about 41 kg total mass and roughly 72 hours of simulated
+            endurance. The longer result came from correcting an overly heavy fuselage assumption,
+            not from changing the energy model.
+          </p>
+          <p>
+            This newer result is an unvalidated simulation. The aircraft has not completed a
+            structural check, component test, prototype build, or flight test; the first physical
+            validation I would run is a solar-panel efficiency test.
+          </p>
+        </section>
+        <section>
           <h2>What the results can tell us</h2>
           <figure class="inline-media">
             <a href="assets/solar-response-curves.png" aria-label="Open full-resolution image"
@@ -115,9 +139,9 @@
         <section>
           <h2>Project record</h2>
           <p>
-            This is a course research project, not a peer-reviewed publication. The contribution
-            summary follows the September 2026 project record; the graph is drawn directly from the
-            archived numerical export.
+            The 27.5-hour result belongs to the course research completed in August 2026. The
+            component-level mass model and 72-hour candidate are later personal extensions. Neither
+            result is a peer-reviewed publication or demonstrated flight duration.
           </p>
           <a class="link more" href="index.html">Home</a>
         </section>
