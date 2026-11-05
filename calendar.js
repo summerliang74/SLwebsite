@@ -47,13 +47,14 @@ calendar.addEventListener("keydown", (e) => {
   show(day);
 });
 
-async function refreshContributions() {
+async function refreshContributions(source = "assets/contributions.json", live = false) {
   const caption = document.querySelector(".activity-plate figcaption > span");
   const status = document.createElement("span");
   status.setAttribute("role", "status");
   caption.append(status);
   try {
-    const response = await fetch("https://github-contributions-api.jogruber.de/v4/summerliang74?y=last", {
+    const response = await fetch(source, {
+      cache: "no-store",
       signal: AbortSignal.timeout(15000),
     });
     if (!response.ok) throw new Error("Contribution request failed");
@@ -103,7 +104,8 @@ async function refreshContributions() {
     link.textContent = "GitHub";
     caption.replaceChildren(number, ` ${total} contributions, ${format.format(new Date(entries[0].date))} – ${format.format(new Date(entries.at(-1).date))}. Source: `, link, ". Updated automatically.");
   } catch (error) {
-    status.textContent = " Showing saved data; live update unavailable.";
+    status.textContent = live ? " Live update unavailable; showing saved data." : " Loading latest contributions…";
   }
+  if (!live) await refreshContributions("https://github-contributions-api.jogruber.de/v4/summerliang74?y=last", true);
 }
 refreshContributions();

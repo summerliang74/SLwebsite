@@ -1,0 +1,28 @@
+name: Update contribution data
+on:
+  schedule:
+    - cron: '17 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: contributions
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch and validate contributions
+        run: |
+          curl --fail --retry 3 --max-time 30 'https://github-contributions-api.jogruber.de/v4/summerliang74?y=last' -o /tmp/contributions.json
+          node -e 'const fs = require("fs"); const data = JSON.parse(fs.readFileSync("/tmp/contributions.json")); if (!Array.isArray(data.contributions) || !data.contributions.length || data.contributions.some(d => !/^\d{4}-\d{2}-\d{2}$/.test(d.date) || !Number.isInteger(d.count) || d.count < 0 || !Number.isInteger(d.level) || d.level < 0 || d.level > 4)) process.exit(1); fs.writeFileSync("assets/contributions.json", JSON.stringify(data));'
+      - name: Commit refreshed data
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/contributions.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update contribution heatmap data'
+            git push
+          fi
