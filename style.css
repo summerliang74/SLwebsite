@@ -925,3 +925,10 @@ a.more:after {
 .profile-page nav .links {
   align-items: center;
 }
+.profile-page .reveal-pending {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce), print {
+  .profile-page .reveal-pending { opacity: 1; }
+}
